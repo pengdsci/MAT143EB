@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 6 Natural BaseLogarithmic and Exponential Functions | MAT 143 E-Coursepack: Brief Calculus</title>
+  <meta name="description" content="The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 6 Natural BaseLogarithmic and Exponential Functions | MAT 143 E-Coursepack: Brief Calculus" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 6 Natural BaseLogarithmic and Exponential Functions | MAT 143 E-Coursepack: Brief Calculus" />
+  
+  <meta name="twitter:description" content="The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Cheng Peng" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="rules-of-derivative.html"/>
+<link rel="next" href="derivative-of-logarithmic-and-exponential-functions.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<center><li><a href="./"><font color = "darkred"><b>MAT 143 E-Coursepack: Brief Calculus</b></font></a><br><font color = "navy">Cheng Peng</font></li></center>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html"><i class="fa fa-check"></i><b>2</b> Functions and Concepts of Limits</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#review-of-function"><i class="fa fa-check"></i><b>2.1</b> Review of function</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#domain-and-range"><i class="fa fa-check"></i><b>2.1.1</b> Domain and Range</a></li>
+<li class="chapter" data-level="2.1.2" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#piece-wise-functions"><i class="fa fa-check"></i><b>2.1.2</b> Piece-wise Functions</a></li>
+<li class="chapter" data-level="2.1.3" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#some-important-functions-and-properties-for-this-course"><i class="fa fa-check"></i><b>2.1.3</b> Some Important Functions and Properties for This Course</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#concepts-of-limits"><i class="fa fa-check"></i><b>2.2</b> Concepts of Limits</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#definition-of-limits-on-the-number-line"><i class="fa fa-check"></i><b>2.2.1</b> Definition of Limits on the number line</a></li>
+<li class="chapter" data-level="2.2.2" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#existence-of-limit"><i class="fa fa-check"></i><b>2.2.2</b> Existence of Limit</a></li>
+<li class="chapter" data-level="2.2.3" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#graphical-analysis-of-limits"><i class="fa fa-check"></i><b>2.2.3</b> Graphical Analysis of Limits</a></li>
+<li class="chapter" data-level="2.2.4" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#calculating-limits"><i class="fa fa-check"></i><b>2.2.4</b> Calculating Limits</a></li>
+<li class="chapter" data-level="2.2.5" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#properties-of-limits"><i class="fa fa-check"></i><b>2.2.5</b> Properties of Limits</a></li>
+<li class="chapter" data-level="2.2.6" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#algebraic-calculation-of-limits-by-examples"><i class="fa fa-check"></i><b>2.2.6</b> Algebraic Calculation of Limits by Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#average-rate-of-change."><i class="fa fa-check"></i><b>2.3</b> Average Rate of Change.</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#average-rate-of-change-of-a-function-over-an-interval"><i class="fa fa-check"></i><b>2.3.1</b> Average rate of change of a function over an interval</a></li>
+<li class="chapter" data-level="2.3.2" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#difference-quotient"><i class="fa fa-check"></i><b>2.3.2</b> Difference quotient</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="functions-and-concepts-of-limits.html"><a href="functions-and-concepts-of-limits.html#exercises"><i class="fa fa-check"></i><b>2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html"><i class="fa fa-check"></i><b>3</b> Average Rate of Change of A Function</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#review-properties-of-limits"><i class="fa fa-check"></i><b>3.1</b> Review: Properties of Limits</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#sum-rule-1"><i class="fa fa-check"></i><b>3.1.1</b> Sum Rule</a></li>
+<li class="chapter" data-level="3.1.2" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#constant-function-rule-1"><i class="fa fa-check"></i><b>3.1.2</b> Constant Function Rule</a></li>
+<li class="chapter" data-level="3.1.3" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#constant-multiple-rule-1"><i class="fa fa-check"></i><b>3.1.3</b> Constant Multiple Rule</a></li>
+<li class="chapter" data-level="3.1.4" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#product-rule-1"><i class="fa fa-check"></i><b>3.1.4</b> Product Rule</a></li>
+<li class="chapter" data-level="3.1.5" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#quotient-rule-1"><i class="fa fa-check"></i><b>3.1.5</b> Quotient Rule</a></li>
+<li class="chapter" data-level="3.1.6" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#power-rule-1"><i class="fa fa-check"></i><b>3.1.6</b> Power Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#algebraic-calculation-of-limits-by-examples-1"><i class="fa fa-check"></i><b>3.2</b> Algebraic Calculation of Limits by Examples</a></li>
+<li class="chapter" data-level="3.3" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#average-rate-of-change.-1"><i class="fa fa-check"></i><b>3.3</b> Average Rate of Change.</a></li>
+<li class="chapter" data-level="3.4" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#average-rate-of-change-of-a-function-over-an-interval-1"><i class="fa fa-check"></i><b>3.4</b> Average rate of change of a function over an interval</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="average-rate-of-change-of-a-function.html"><a href="average-rate-of-change-of-a-function.html#difference-quotient-1"><i class="fa fa-check"></i><b>3.4.1</b> Difference quotient</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html"><i class="fa fa-check"></i><b>4</b> Rate of Change and Derivative of Functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#review-concepts-of-limits"><i class="fa fa-check"></i><b>4.1</b> Review: Concepts of Limits</a></li>
+<li class="chapter" data-level="4.2" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#properties-of-limits-1"><i class="fa fa-check"></i><b>4.2</b> Properties of Limits</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#sum-rule-2"><i class="fa fa-check"></i><b>4.2.1</b> Sum Rule</a></li>
+<li class="chapter" data-level="4.2.2" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#constant-function-rule-2"><i class="fa fa-check"></i><b>4.2.2</b> Constant Function Rule</a></li>
+<li class="chapter" data-level="4.2.3" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#constant-multiple-rule-2"><i class="fa fa-check"></i><b>4.2.3</b> Constant Multiple Rule</a></li>
+<li class="chapter" data-level="4.2.4" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#product-rule-2"><i class="fa fa-check"></i><b>4.2.4</b> Product Rule</a></li>
+<li class="chapter" data-level="4.2.5" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#quotient-rule-2"><i class="fa fa-check"></i><b>4.2.5</b> Quotient Rule</a></li>
+<li class="chapter" data-level="4.2.6" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#power-rule-2"><i class="fa fa-check"></i><b>4.2.6</b> Power Rule</a></li>
+<li class="chapter" data-level="4.2.7" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#algebraic-calculation-of-limits-by-examples-2"><i class="fa fa-check"></i><b>4.2.7</b> Algebraic Calculation of Limits by Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#average-rate-of-change.-2"><i class="fa fa-check"></i><b>4.3</b> Average Rate of Change.</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#average-rate-of-change-of-a-function-over-an-interval-2"><i class="fa fa-check"></i><b>4.3.1</b> Average rate of change of a function over an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#definition-of-derivative"><i class="fa fa-check"></i><b>4.4</b> Definition of Derivative</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#difference-quotient-2"><i class="fa fa-check"></i><b>4.4.1</b> Difference quotient</a></li>
+<li class="chapter" data-level="4.4.2" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#instantaneous-rate-of-change-derivative"><i class="fa fa-check"></i><b>4.4.2</b> Instantaneous Rate of Change: Derivative</a></li>
+<li class="chapter" data-level="4.4.3" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#finding-derivatives"><i class="fa fa-check"></i><b>4.4.3</b> Finding Derivatives</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#basic-rules-of-derivatives---part-i."><i class="fa fa-check"></i><b>4.5</b> Basic Rules of Derivatives - Part I.</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#power-rule-3"><i class="fa fa-check"></i><b>4.5.1</b> Power Rule</a></li>
+<li class="chapter" data-level="4.5.2" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#additive-rule"><i class="fa fa-check"></i><b>4.5.2</b> Additive Rule</a></li>
+<li class="chapter" data-level="4.5.3" data-path="rate-of-change-and-derivative-of-functions.html"><a href="rate-of-change-and-derivative-of-functions.html#summary-and-more-examples"><i class="fa fa-check"></i><b>4.5.3</b> Summary and More Examples</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="rules-of-derivative.html"><a href="rules-of-derivative.html"><i class="fa fa-check"></i><b>5</b> Rules of Derivative</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="rules-of-derivative.html"><a href="rules-of-derivative.html#review-of-derivative"><i class="fa fa-check"></i><b>5.1</b> Review of Derivative</a></li>
+<li class="chapter" data-level="5.2" data-path="rules-of-derivative.html"><a href="rules-of-derivative.html#leibniz-notation"><i class="fa fa-check"></i><b>5.2</b> Leibniz Notation</a></li>
+<li class="chapter" data-level="5.3" data-path="rules-of-derivative.html"><a href="rules-of-derivative.html#multiplicative-rule"><i class="fa fa-check"></i><b>5.3</b> Multiplicative Rule</a></li>
+<li class="chapter" data-level="5.4" data-path="rules-of-derivative.html"><a href="rules-of-derivative.html#quotient-rule-3"><i class="fa fa-check"></i><b>5.4</b> Quotient Rule</a></li>
+<li class="chapter" data-level="5.5" data-path="rules-of-derivative.html"><a href="rules-of-derivative.html#chain-rule"><i class="fa fa-check"></i><b>5.5</b> Chain Rule</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="rules-of-derivative.html"><a href="rules-of-derivative.html#composite-function"><i class="fa fa-check"></i><b>5.5.1</b> Composite Function</a></li>
+<li class="chapter" data-level="5.5.2" data-path="rules-of-derivative.html"><a href="rules-of-derivative.html#chain-rule-1"><i class="fa fa-check"></i><b>5.5.2</b> Chain Rule</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="natural-baselogarithmic-and-exponential-functions.html"><a href="natural-baselogarithmic-and-exponential-functions.html"><i class="fa fa-check"></i><b>6</b> Natural BaseLogarithmic and Exponential Functions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="natural-baselogarithmic-and-exponential-functions.html"><a href="natural-baselogarithmic-and-exponential-functions.html#review-inverse-function"><i class="fa fa-check"></i><b>6.1</b> Review: Inverse Function</a></li>
+<li class="chapter" data-level="6.2" data-path="natural-baselogarithmic-and-exponential-functions.html"><a href="natural-baselogarithmic-and-exponential-functions.html#definition-of-natural-base-euler-constant-e"><i class="fa fa-check"></i><b>6.2</b> Definition of Natural Base (Euler Constant <span class="math inline">\(e\)</span>)</a></li>
+<li class="chapter" data-level="6.3" data-path="natural-baselogarithmic-and-exponential-functions.html"><a href="natural-baselogarithmic-and-exponential-functions.html#natural-base-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>6.3</b> Natural-base Exponential and Logarithmic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="derivative-of-logarithmic-and-exponential-functions.html"><a href="derivative-of-logarithmic-and-exponential-functions.html"><i class="fa fa-check"></i><b>7</b> Derivative of Logarithmic and Exponential Functions</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="derivative-of-logarithmic-and-exponential-functions.html"><a href="derivative-of-logarithmic-and-exponential-functions.html#review-topics"><i class="fa fa-check"></i><b>7.1</b> Review Topics</a></li>
+<li class="chapter" data-level="7.2" data-path="derivative-of-logarithmic-and-exponential-functions.html"><a href="derivative-of-logarithmic-and-exponential-functions.html#derivative-of-natural-base-exponential-functions"><i class="fa fa-check"></i><b>7.2</b> Derivative of Natural-base Exponential Functions</a></li>
+<li class="chapter" data-level="7.3" data-path="derivative-of-logarithmic-and-exponential-functions.html"><a href="derivative-of-logarithmic-and-exponential-functions.html#derivative-of-natural-logarithmic-functions"><i class="fa fa-check"></i><b>7.3</b> Derivative of Natural Logarithmic Functions</a></li>
+<li class="chapter" data-level="7.4" data-path="derivative-of-logarithmic-and-exponential-functions.html"><a href="derivative-of-logarithmic-and-exponential-functions.html#exponential-models"><i class="fa fa-check"></i><b>7.4</b> Exponential Models</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="derivative-of-logarithmic-and-exponential-functions.html"><a href="derivative-of-logarithmic-and-exponential-functions.html#exponential-growth-model"><i class="fa fa-check"></i><b>7.4.1</b> Exponential Growth Model</a></li>
+<li class="chapter" data-level="7.4.2" data-path="derivative-of-logarithmic-and-exponential-functions.html"><a href="derivative-of-logarithmic-and-exponential-functions.html#exponential-decay-models"><i class="fa fa-check"></i><b>7.4.2</b> Exponential Decay Models</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="derivative-of-general-logarithmic-and-exponential-functions.html"><a href="derivative-of-general-logarithmic-and-exponential-functions.html"><i class="fa fa-check"></i><b>8</b> Derivative of General Logarithmic and Exponential Functions</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="derivative-of-general-logarithmic-and-exponential-functions.html"><a href="derivative-of-general-logarithmic-and-exponential-functions.html#review-topics-1"><i class="fa fa-check"></i><b>8.1</b> Review Topics</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="derivative-of-general-logarithmic-and-exponential-functions.html"><a href="derivative-of-general-logarithmic-and-exponential-functions.html#five-rules-of-derivative"><i class="fa fa-check"></i><b>8.1.1</b> Five Rules of Derivative</a></li>
+<li class="chapter" data-level="8.1.2" data-path="derivative-of-general-logarithmic-and-exponential-functions.html"><a href="derivative-of-general-logarithmic-and-exponential-functions.html#log-and-exponential-functions---definitions"><i class="fa fa-check"></i><b>8.1.2</b> Log and Exponential Functions - Definitions</a></li>
+<li class="chapter" data-level="8.1.3" data-path="derivative-of-general-logarithmic-and-exponential-functions.html"><a href="derivative-of-general-logarithmic-and-exponential-functions.html#log-and-exponential-functions---properties"><i class="fa fa-check"></i><b>8.1.3</b> Log and Exponential Functions - Properties</a></li>
+<li class="chapter" data-level="8.1.4" data-path="derivative-of-general-logarithmic-and-exponential-functions.html"><a href="derivative-of-general-logarithmic-and-exponential-functions.html#derivative-of-natural-base-functions"><i class="fa fa-check"></i><b>8.1.4</b> Derivative of Natural-base Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="derivative-of-general-logarithmic-and-exponential-functions.html"><a href="derivative-of-general-logarithmic-and-exponential-functions.html#exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>8.2</b> Exponential and Logarithmic Functions</a></li>
+<li class="chapter" data-level="8.3" data-path="derivative-of-general-logarithmic-and-exponential-functions.html"><a href="derivative-of-general-logarithmic-and-exponential-functions.html#business-applications"><i class="fa fa-check"></i><b>8.3</b> Business Applications</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="critical-values.html"><a href="critical-values.html"><i class="fa fa-check"></i><b>9</b> Critical Values</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="critical-values.html"><a href="critical-values.html#review-topics-2"><i class="fa fa-check"></i><b>9.1</b> Review Topics</a></li>
+<li class="chapter" data-level="9.2" data-path="critical-values.html"><a href="critical-values.html#increasing-and-decreasing-functions"><i class="fa fa-check"></i><b>9.2</b> Increasing and decreasing functions</a></li>
+<li class="chapter" data-level="9.3" data-path="critical-values.html"><a href="critical-values.html#critival-value"><i class="fa fa-check"></i><b>9.3</b> Critival Value</a></li>
+<li class="chapter" data-level="9.4" data-path="critical-values.html"><a href="critical-values.html#relative-local-maximum-and-minimum-values"><i class="fa fa-check"></i><b>9.4</b> Relative (Local) Maximum and Minimum Values</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html"><i class="fa fa-check"></i><b>10</b> Critical Values, Extema and Curve Sketching</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html#summary-of-critical-values-and-extrema"><i class="fa fa-check"></i><b>10.1</b> Summary of Critical Values and Extrema</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html#critical-values-1"><i class="fa fa-check"></i><b>10.1.1</b> Critical values</a></li>
+<li class="chapter" data-level="10.1.2" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html#relative-local-maximum-and-minimum-values-1"><i class="fa fa-check"></i><b>10.1.2</b> Relative (Local) Maximum and Minimum Values</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html#concavity-of-function"><i class="fa fa-check"></i><b>10.2</b> Concavity of Function</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html#the-second-order-derivative"><i class="fa fa-check"></i><b>10.2.1</b> The Second Order Derivative</a></li>
+<li class="chapter" data-level="10.2.2" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html#concavity-of-functions"><i class="fa fa-check"></i><b>10.2.2</b> Concavity of Functions</a></li>
+<li class="chapter" data-level="10.2.3" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html#testing-for-minima-and-maxima"><i class="fa fa-check"></i><b>10.2.3</b> Testing for Minima and maxima</a></li>
+<li class="chapter" data-level="10.2.4" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html#inflection-point---turning-point-of-concavity"><i class="fa fa-check"></i><b>10.2.4</b> Inflection Point - Turning Point of Concavity</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="critical-values-extema-and-curve-sketching.html"><a href="critical-values-extema-and-curve-sketching.html#curve-sketching"><i class="fa fa-check"></i><b>10.3</b> Curve Sketching</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="maximum-minimum-and-applications.html"><a href="maximum-minimum-and-applications.html"><i class="fa fa-check"></i><b>11</b> Maximum, Minimum and Applications</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="maximum-minimum-and-applications.html"><a href="maximum-minimum-and-applications.html#absolute-maximum-and-minimum"><i class="fa fa-check"></i><b>11.1</b> Absolute Maximum and Minimum</a></li>
+<li class="chapter" data-level="11.2" data-path="maximum-minimum-and-applications.html"><a href="maximum-minimum-and-applications.html#maximum-and-minimum-principles"><i class="fa fa-check"></i><b>11.2</b> Maximum and Minimum Principles</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="maximum-minimum-and-applications.html"><a href="maximum-minimum-and-applications.html#steps-for-finding-absolute-maximum-and-minimum"><i class="fa fa-check"></i><b>11.2.1</b> Steps for Finding Absolute Maximum and Minimum</a></li>
+<li class="chapter" data-level="11.2.2" data-path="maximum-minimum-and-applications.html"><a href="maximum-minimum-and-applications.html#single-absolute-maximumminimum-over-an-open-interval"><i class="fa fa-check"></i><b>11.2.2</b> Single Absolute Maximum/Minimum Over An Open Interval</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="maximum-minimum-and-applications.html"><a href="maximum-minimum-and-applications.html#business-applications-1"><i class="fa fa-check"></i><b>11.3</b> Business Applications</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="maximum-minimum-and-applications.html"><a href="maximum-minimum-and-applications.html#minimization-of-average-cost"><i class="fa fa-check"></i><b>11.3.1</b> Minimization of Average Cost</a></li>
+<li class="chapter" data-level="11.3.2" data-path="maximum-minimum-and-applications.html"><a href="maximum-minimum-and-applications.html#minimizing-manufacturing-cost"><i class="fa fa-check"></i><b>11.3.2</b> Minimizing Manufacturing Cost</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="marginal-analysis-and-derivative-of-implicit-functions.html"><a href="marginal-analysis-and-derivative-of-implicit-functions.html"><i class="fa fa-check"></i><b>12</b> Marginal Analysis and Derivative of Implicit Functions</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="marginal-analysis-and-derivative-of-implicit-functions.html"><a href="marginal-analysis-and-derivative-of-implicit-functions.html#more-business-applications"><i class="fa fa-check"></i><b>12.1</b> More Business Applications</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="marginal-analysis-and-derivative-of-implicit-functions.html"><a href="marginal-analysis-and-derivative-of-implicit-functions.html#marginal-analysis"><i class="fa fa-check"></i><b>12.1.1</b> Marginal Analysis</a></li>
+<li class="chapter" data-level="12.1.2" data-path="marginal-analysis-and-derivative-of-implicit-functions.html"><a href="marginal-analysis-and-derivative-of-implicit-functions.html#elastic-demand"><i class="fa fa-check"></i><b>12.1.2</b> Elastic Demand</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="marginal-analysis-and-derivative-of-implicit-functions.html"><a href="marginal-analysis-and-derivative-of-implicit-functions.html#implicit-differentiation"><i class="fa fa-check"></i><b>12.2</b> Implicit Differentiation</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="marginal-analysis-and-derivative-of-implicit-functions.html"><a href="marginal-analysis-and-derivative-of-implicit-functions.html#some-illustrative-examples"><i class="fa fa-check"></i><b>12.2.1</b> Some Illustrative Examples</a></li>
+<li class="chapter" data-level="12.2.2" data-path="marginal-analysis-and-derivative-of-implicit-functions.html"><a href="marginal-analysis-and-derivative-of-implicit-functions.html#differentiating-implicit-function-as-simplification"><i class="fa fa-check"></i><b>12.2.2</b> Differentiating Implicit Function As Simplification</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="definition-of-antiderivative.html"><a href="definition-of-antiderivative.html"><i class="fa fa-check"></i><b>13</b> Definition of Antiderivative</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="definition-of-antiderivative.html"><a href="definition-of-antiderivative.html#review-rules-of-derivative"><i class="fa fa-check"></i><b>13.1</b> Review: Rules of Derivative</a></li>
+<li class="chapter" data-level="13.2" data-path="definition-of-antiderivative.html"><a href="definition-of-antiderivative.html#anti-derivative"><i class="fa fa-check"></i><b>13.2</b> Anti-derivative</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="definition-of-antiderivative.html"><a href="definition-of-antiderivative.html#finding-antiderivatives"><i class="fa fa-check"></i><b>13.2.1</b> Finding Antiderivatives</a></li>
+<li class="chapter" data-level="13.2.2" data-path="definition-of-antiderivative.html"><a href="definition-of-antiderivative.html#rules-of-integration"><i class="fa fa-check"></i><b>13.2.2</b> Rules of Integration</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="definite-integral.html"><a href="definite-integral.html"><i class="fa fa-check"></i><b>14</b> Definite Integral</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="definite-integral.html"><a href="definite-integral.html#areas-defined-by-curves-of-functions"><i class="fa fa-check"></i><b>14.1</b> Areas Defined by Curves of Functions</a></li>
+<li class="chapter" data-level="14.2" data-path="definite-integral.html"><a href="definite-integral.html#definite-integral-1"><i class="fa fa-check"></i><b>14.2</b> Definite Integral</a></li>
+<li class="chapter" data-level="14.3" data-path="definite-integral.html"><a href="definite-integral.html#fundmental-theorem-of-calculus"><i class="fa fa-check"></i><b>14.3</b> Fundmental Theorem of Calculus</a></li>
+<li class="chapter" data-level="14.4" data-path="definite-integral.html"><a href="definite-integral.html#properties-of-definite-integrals"><i class="fa fa-check"></i><b>14.4</b> Properties of Definite Integrals</a></li>
+<li class="chapter" data-level="14.5" data-path="definite-integral.html"><a href="definite-integral.html#average-value-of-a-continuous-function"><i class="fa fa-check"></i><b>14.5</b> Average Value of A Continuous Function</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="integration-by-substitution-and-multivariable-functions.html"><a href="integration-by-substitution-and-multivariable-functions.html"><i class="fa fa-check"></i><b>15</b> Integration by Substitution and Multivariable Functions</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="integration-by-substitution-and-multivariable-functions.html"><a href="integration-by-substitution-and-multivariable-functions.html#integration-by-substitution"><i class="fa fa-check"></i><b>15.1</b> Integration by Substitution</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="integration-by-substitution-and-multivariable-functions.html"><a href="integration-by-substitution-and-multivariable-functions.html#examples-of-substitution"><i class="fa fa-check"></i><b>15.1.1</b> Examples of Substitution</a></li>
+<li class="chapter" data-level="15.1.2" data-path="integration-by-substitution-and-multivariable-functions.html"><a href="integration-by-substitution-and-multivariable-functions.html#business-and-economics-applications"><i class="fa fa-check"></i><b>15.1.2</b> Business and Economics Applications</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="integration-by-substitution-and-multivariable-functions.html"><a href="integration-by-substitution-and-multivariable-functions.html#motivariable-functions"><i class="fa fa-check"></i><b>15.2</b> Motivariable Functions</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="integration-by-substitution-and-multivariable-functions.html"><a href="integration-by-substitution-and-multivariable-functions.html#definition-and-geometry"><i class="fa fa-check"></i><b>15.2.1</b> Definition and Geometry</a></li>
+<li class="chapter" data-level="15.2.2" data-path="integration-by-substitution-and-multivariable-functions.html"><a href="integration-by-substitution-and-multivariable-functions.html#partial-derivatives"><i class="fa fa-check"></i><b>15.2.2</b> Partial Derivatives</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="applications-of-mutivariable-functions.html"><a href="applications-of-mutivariable-functions.html"><i class="fa fa-check"></i><b>16</b> Applications of Mutivariable Functions</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="applications-of-mutivariable-functions.html"><a href="applications-of-mutivariable-functions.html#more-on-partial-derivatives"><i class="fa fa-check"></i><b>16.1</b> More on Partial Derivatives</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="applications-of-mutivariable-functions.html"><a href="applications-of-mutivariable-functions.html#examples"><i class="fa fa-check"></i><b>16.1.1</b> Examples</a></li>
+<li class="chapter" data-level="16.1.2" data-path="applications-of-mutivariable-functions.html"><a href="applications-of-mutivariable-functions.html#geometry-of-partial-derivatives"><i class="fa fa-check"></i><b>16.1.2</b> Geometry of Partial Derivatives</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="applications-of-mutivariable-functions.html"><a href="applications-of-mutivariable-functions.html#business-applications---marginal-productivity"><i class="fa fa-check"></i><b>16.2</b> Business Applications - Marginal Productivity</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MAT 143 E-Coursepack: Brief Calculus</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="natural-baselogarithmic-and-exponential-functions" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Topic 6</span> Natural BaseLogarithmic and Exponential Functions<a href="natural-baselogarithmic-and-exponential-functions.html#natural-baselogarithmic-and-exponential-functions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This note focuses on the definitions and properties of natural base logarithmic and exponential functions and their applications in business and economics.</p>
+<div id="review-inverse-function" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Review: Inverse Function<a href="natural-baselogarithmic-and-exponential-functions.html#review-inverse-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Notation</strong> Let <span class="math inline">\(f(x)\)</span> be a strictly monotonic function with <font color = "red"><b><strong>domain D</strong></b></font> and <font color = "blue"><b><strong>range R</strong></b></font>. The inverse of <span class="math inline">\(f(x)\)</span>, denoted by <span class="math inline">\(f^{-1}(x)\)</span>, is also a strictly monotonic function with <font color = "red"><b><strong>domain R</strong></b></font> and <font color = "blue"><b><strong>range D</strong></b></font>. The following figure uses a simple example to illustrate the the relationship between a function and its inverse.</li>
+</ul>
+<p><img src="img04/w04-InvFunDemo.png" width="60%" style="display: block; margin: auto;" /></p>
+<p>The above table and figure basically show that we swap x- and y-coordinates of one function to get its inverse and the corresponding curves are symmetric with respect to <span class="math inline">\(y = x\)</span>, the diagonal of the first and third quadrants.</p>
+<p>Algebraically, the above figure basically says that, to find the inverse of <span class="math inline">\(y = f(x)\)</span> (if it exists), we only need to swap <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in <span class="math inline">\(y = f(x)\)</span> to get <span class="math inline">\(x = f(y)\)</span>. <font color = "red"><b><strong>Keep in mind that <span class="math inline">\(y\)</span> in <span class="math inline">\(x = f(y)\)</span> is still the dependent variable and x is still the independent variable</strong>.</b></font></p>
+<p>In many cases, we want to re-express <span class="math inline">\(y\)</span> explicitly in term of <span class="math inline">\(x\)</span> as <span class="math inline">\(y = f^{-1}(x)\)</span> <font color = "red"><b><strong>if the close form exists</strong></b></font>.</p>
+<p>Next chart shows the steps for finding the explicit expression of an inverse function (if it exists).</p>
+<p><img src="img04/w04-inverseFun.png" width="45%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 1</strong>. Find the inverse function of <span class="math inline">\(f(x) = x^2\)</span> for <span class="math inline">\(x &gt; 0\)</span>.</p>
+<p><strong>Solution</strong>: According to the steps, we have</p>
+<p><code>Step 1.</code> let <span class="math inline">\(y = x^2\)</span>.</p>
+<p><code>Step 2.</code> swap <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>: <span class="math inline">\(x = y^2\)</span>.</p>
+<p><code>Step 3.</code> Solve for <span class="math inline">\(y\)</span>: <span class="math inline">\(y = \sqrt{x}\)</span>.</p>
+<p>Therefore, the inverse of <span class="math inline">\(f(x) = x^2\)</span> is given by <span class="math inline">\(y = f^{-1}(x) = \sqrt{x}\)</span>.</p>
+<p>The following animated graph shows the symmetry of <span class="math inline">\(y = x^2\)</span> and <span class="math inline">\(x = \sqrt{x}\)</span>.</p>
+<p><br />
+</p>
+<p><img src="img04/Function-inverse-animation2.gif" width="40%" style="display: block; margin: auto;" /></p>
+<p><br />
+</p>
+</div>
+<div id="definition-of-natural-base-euler-constant-e" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Definition of Natural Base (Euler Constant <span class="math inline">\(e\)</span>)<a href="natural-baselogarithmic-and-exponential-functions.html#definition-of-natural-base-euler-constant-e" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><br />
+</p>
+<p><strong>Example 2</strong>. Assume that you put 10000 dollars (<strong>principal</strong>, denoted by <span class="math inline">\(P\)</span>) in a saving account. The Bank pays you the interest at an annual rate of <span class="math inline">\(r\)</span> (in decimal, for example, <span class="math inline">\(r = 2.5\% = 0.025\)</span>) . We look at the number of times (<span class="math inline">\(n\)</span>) the bank calculates the compounding interest <strong>in a year</strong> and the corresponding interest earnings. For convenience, we use <span class="math inline">\(A\)</span> to denote the <strong>acount balance</strong> (the amount in the account after a year, i.e., <strong>A = principal + interest</strong>).</p>
+<ul>
+<li><p><span class="math inline">\(n = 1\)</span>: A = principal (P) + interest (<span class="math inline">\(P\times r\)</span>) = <span class="math inline">\(P + Pr = P(1+r)\)</span>.</p></li>
+<li><p><span class="math inline">\(n =2\)</span>: Since the bank will compound the interest two times a year. When calculating the interest, we need to use the semi-annual interest rate (<span class="math inline">\(r/2\)</span>) instead of the original annual rate (<span class="math inline">\(r\)</span>).</p>
+<ul>
+<li><p>First calculation: <span class="math inline">\(A_1 = P + P\times (r/2) = P(1 + r/2)\)</span>. Since the interest from every previous period is added to the principal, this means that <span class="math inline">\(A_1\)</span> will be new principal in the second calculation;</p></li>
+<li><p>Second calculation: <span class="math inline">\(A_2 = A_1 + A_1 \times (r/2) = A_1(1+r/2) = P(1+r/2)\times (1 + r/2) = P(1 + r/2)^2\)</span>.</p></li>
+</ul></li>
+<li><p><span class="math inline">\(n = 3\)</span>: Use the sample logic in the case of <span class="math inline">\(n = 2\)</span>, the interest rate in each of the three calculations is <span class="math inline">\(r/3\)</span>.</p>
+<ul>
+<li><p>First calculation: <span class="math inline">\(A_1 = P + P\times (r/3) = P(1 + r/3)\)</span>, This <span class="math inline">\(A_1\)</span> will be new principal in the second calculation;</p></li>
+<li><p>Second calculation: <span class="math inline">\(A_2 = A_1 + A_1 \times (r/3) = A_1(1+r/3) = P(1+r/3)\times (1 + r/3) = P(1 + r/3)^2\)</span>.</p></li>
+<li><p>Third calculation: <span class="math inline">\(A_3 = A_2 + A_2 \times (r/3) = A_2(1+r/3) = P(1+r/3)^2\times (1 + r/3) = P(1 + r/3)^3\)</span>.</p></li>
+</ul></li>
+</ul>
+<p>In general, if the interest is compounded <span class="math inline">\(n\)</span> times a year, then the balance is expressed in the following</p>
+<p><img src="img04/w04-CompundInterestOneYear.png" width="45%" style="display: block; margin: auto;" /></p>
+<p>The above formula can be re-expressed into</p>
+<p><img src="img04/w04-CompoundingInterest02.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><font color = "red"><b><strong>If the interest is compounded continuously, i.e., <span class="math inline">\(n \to \infty\)</span></strong></b></font>, then <font color = "blue"><b><strong><span class="math inline">\(x \to \infty\)</span></strong></b></font>.</p>
+<p><br />
+</p>
+<p><strong>Definition</strong>: The <strong>natural base</strong>, denoted by <span class="math inline">\(e\)</span>, is the <strong>constant value</strong> given by
+<span class="math display">\[
+e = \lim_{x \to \infty}\left( 1 + \frac{1}{x}\right)^x \approx 2.71828182845....
+\]</span></p>
+<p>Therefore, if the interest is compounded continually, <font color = "red"><b><strong>the account balance after a year</strong></b></font> is simply expressed in the following form</p>
+<p><img src="img04/w04-AnnualBalanceContinuousCompounding.png" width="30%" style="display: block; margin: auto;" /></p>
+<p>More generally, with principal <span class="math inline">\(P\)</span> and continuous compounding interest, the account balance after <span class="math inline">\(y\)</span> years is</p>
+<p><img src="img04/w04-AnnualBalanceT-years-balance.png" width="30%" style="display: block; margin: auto;" />
+where <span class="math inline">\(t = \text{ number of years}\)</span>. The component <span class="math inline">\(e^r\)</span> is dependent on the value of the nominal annual interest rate. It is considered a function of <span class="math inline">\(r\)</span> - natural base exponential function.</p>
+<p><br />
+</p>
+<p><strong>Example 3</strong>: Rachel invests $20,000 in an account that earns interest at an annual rate of 4%. Find the future value of her account after 3 yr if interest is compounded continuously.</p>
+<p><strong>Solution</strong>: We have <span class="math inline">\(P =\$20000, r = 0.04\)</span>, and <span class="math inline">\(t = 3\)</span>. Since interest is compounded continuously, after 3 yr, Rachel’s account will be worth</p>
+<p><span class="math display">\[
+A = 20000e^{0.04\times 3} = 23470.22.
+\]</span>
+Therefore, the account balance after 3 years is <span class="math inline">\(\$23470.22\)</span>.</p>
+<p><br />
+</p>
+</div>
+<div id="natural-base-exponential-and-logarithmic-functions" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Natural-base Exponential and Logarithmic Functions<a href="natural-baselogarithmic-and-exponential-functions.html#natural-base-exponential-and-logarithmic-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The example in the previous section shows that various exponential growth and decay models in applications in the business and other fields are natural base exponential function. Next, we outline the natural base exponential function and its inverse, natural base exponential and logarithmic functions.</p>
+<p><img src="img04/w04-NaturalExpLogDef.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><br />
+</p>
+<p>The definition of natural base exponential and longarithmic functions are defined respectively in the following.</p>
+<p><br />
+</p>
+<p><img src="img04/w04-ExpLogNaturalComparison.png" width="40%" style="display: block; margin: auto;" /></p>
+<p>Since <span class="math inline">\(y = e^x\)</span> and <span class="math inline">\(y = \ln(x)\)</span> are mutually inverse, their curves are symmetric with respect to <span class="math inline">\(y = x\)</span>.</p>
+<p><img src="img04/w04-NaturalExpLog.png" width="40%" style="display: block; margin: auto;" /></p>
+<p>The basic properties of natural logarithmic and exponential functions are summarized in the following.</p>
+<p><img src="img04/w04-NaturalExpLogProperties.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><strong>Example 3</strong>: Simply the following expressions.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\ln(x^4\sqrt{x^5})\)</span></p></li>
+<li><p><span class="math inline">\(\ln(x^3y^2/z^5)\)</span></p></li>
+</ol>
+<p><strong>Solution</strong>: We the above rules to simply the given expressions.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\ln(x^4\sqrt{x^5}) = \ln(x^4 \times x^{5/2}) = \ln(x^{4+5/2}) = \ln(x^{13/2}) = (13/2)\ln(x)\)</span></p></li>
+<li><p><span class="math inline">\(\ln(x^3y^2/z^5) = \ln(x^3y^2) -\ln(z^5) = \ln(x^3) + \ln(y^2) - \ln(x^5) = 3\ln x+2\ln y -5\ln z\)</span>.</p></li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="rules-of-derivative.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="derivative-of-logarithmic-and-exponential-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/pengdsci/MAT143EB/edit/master/05-LogExpFunctions.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["MAT143EB.pdf", "MAT143EB.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
